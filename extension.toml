@@ -1,0 +1,11 @@
+id = "postgrestools"
+name = "PostgreSQL Tools"
+description = "Support for the Supabase PostgreSQL Tools."
+version = "0.0.1"
+schema_version = 1
+authors = ["Cathal Mullan <contact@cathal.dev>"]
+repository = "https://github.com/DuskSystems/zed-postgrestools"
+
+[language_servers.postgrestools]
+name = "postgrestools"
+languages = ["SQL"]
