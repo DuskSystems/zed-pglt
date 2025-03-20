@@ -8,20 +8,20 @@
   openssl,
 }:
 
-rustPlatform.buildRustPackage {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "postgrestools";
-  version = " 0.2.0";
+  version = "0.2.1";
 
   src = fetchFromGitHub {
     owner = "supabase-community";
     repo = "postgres_lsp";
-    tag = "0.2.0";
-    hash = "sha256-WUdO95vFsBsaMhEowPruEytUuh8jHqmeJUvkoXqlqYM=";
+    rev = finalAttrs.version;
+    hash = "sha256-K1Z3CnNrpFFMLq7kgifGM1Na3ptdU4JOUnYtzC5zVCs=";
     fetchSubmodules = true;
   };
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-RK5cyA7XnQcwa6dvJBgIMY64ezIX1boqmS964qavaqA=";
+  cargoHash = "sha256-jB2IlfbK52rm+7XJl22xXd9QvsR8RsTMttqAQKhbmD0=";
 
   cargoBuildFlags = [ "--package=pgt_cli" ];
   cargoTestFlags = [ "--package=pgt_cli" ];
@@ -61,4 +61,4 @@ rustPlatform.buildRustPackage {
     license = lib.licenses.mit;
     mainProgram = "postgrestools";
   };
-}
+})
