@@ -10,13 +10,13 @@
 
 rustPlatform.buildRustPackage {
   pname = "postgrestools";
-  version = "96fcad06454f511b20bd88354f84a20528a0f693";
+  version = " 0.2.0";
 
   src = fetchFromGitHub {
     owner = "supabase-community";
     repo = "postgres_lsp";
-    rev = "96fcad06454f511b20bd88354f84a20528a0f693";
-    hash = "sha256-POA4VJ+r0jhG5DvCAQQZ2U1FSrTraibW5CFlks9fDvg=";
+    tag = "0.2.0";
+    hash = "sha256-WUdO95vFsBsaMhEowPruEytUuh8jHqmeJUvkoXqlqYM=";
     fetchSubmodules = true;
   };
 
